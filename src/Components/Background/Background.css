@@ -1,0 +1,147 @@
+.background-slider {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: calc(100vh - 6rem); 
+  overflow: hidden; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  background: rgb(30, 30, 30);
+}
+
+.slide {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 6rem);  
+  background-size: cover;
+  background-position: center;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.5s;  
+  z-index: 0;
+}
+
+.slide .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.5); 
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.slide.active {
+  transform: translateX(0);  
+  opacity: 1; 
+  z-index: 1; 
+}
+
+.slide.left{
+    transform: translateX(-100vw);
+    opacity: 0;
+    z-index: 0;
+}
+
+.slide.right{
+    transform: translateX(100vw);
+    opacity: 0;
+    z-index: 0;
+}
+
+.text-overlay {
+  background: rgb(30, 30, 30, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: absolute;
+  bottom: 7rem;  
+  padding: 20px;
+  border-radius: 1rem;
+  box-sizing: border-box; 
+  z-index: 4;
+  width: 100vw;
+}
+.text-overlay p{
+    color: #fff;
+    opacity: 1;
+}
+
+.text-overlay .small-text {
+  z-index: 4;
+  font-size: 3rem;
+  color: yellow;
+  font-weight: 700;
+  height: 4rem;
+  opacity: 1;
+}
+
+.nav-btns{
+    background: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    width: 10em
+}
+.nav-btns:hover{
+    background: linear-gradient(90deg, #6f42c1 0%, #3a8dde 100%);
+    transition: background 0.6s, transform 0.6s;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.nav-btns button{
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.nav-btns img{
+  filter: brightness(0) saturate(100%);
+  width: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.nav-btns button a{
+  text-decoration: none;
+  color: #000000;
+} 
+
+
+@media (max-width: 768px) {
+  .text-overlay{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .text-overlay p {
+    font-size: 1em;
+  }
+  .text-overlay .small-text{
+    font-size: 2.2em;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .text-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .text-overlay .small-text{
+    font-size: 1.5rem
+  }
+  .text-overlay p {
+    font-size: 0.9em;
+  }
+}
