@@ -113,3 +113,14 @@
     display: block; 
   }
 }
+  
+@media screen and (max-width: 425px) {
+    .navbar{
+        height: 3.5rem;
+    }
+    .nav-btn{
+        position: absolute;
+        height: 2.2rem;
+        left: 12rem;
+}
+}

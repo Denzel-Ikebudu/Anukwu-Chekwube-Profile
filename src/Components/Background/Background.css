@@ -117,7 +117,7 @@
 
 @media (max-width: 768px) {
   .background-slider{
-    height: calc(100vh - 6rem); 
+    height: calc(100vh - 8rem); 
   }
   .text-overlay{
     position: absolute; 
