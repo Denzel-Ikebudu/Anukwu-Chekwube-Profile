@@ -59,7 +59,7 @@
   flex-direction: column;
   gap: 28px;
   position: absolute;
-  bottom: 7rem;  
+  bottom: 0;  
   padding: 20px;
   border-radius: 1rem;
   box-sizing: border-box; 
@@ -116,7 +116,12 @@
 
 
 @media (max-width: 768px) {
+  .background-slider{
+    height: calc(100vh - 6rem); 
+  }
   .text-overlay{
+    position: absolute; 
+    bottom: 0;
     display: flex;
     flex-direction: column;
     gap: 30px;

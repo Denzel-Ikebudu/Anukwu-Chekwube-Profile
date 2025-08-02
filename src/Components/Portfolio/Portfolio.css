@@ -1,5 +1,5 @@
 .portfolio{
-    background: #ebebeb;
+    background: rgb(30, 30, 30);
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -9,7 +9,19 @@
 }
 .portfolio h2{
     font-weight: 700;
+    color: #ffffff;
 }
+.portfolio h2 span{
+  font-weight: 700;
+  color: yellow;
+}
+
+.portfolio p{
+  color: #ffffff;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
 .portfolio-items {
     width: 100%;
     max-width: 1200px;

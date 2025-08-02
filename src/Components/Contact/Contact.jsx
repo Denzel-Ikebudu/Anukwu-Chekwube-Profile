@@ -7,7 +7,7 @@ import mail_icon from '../Assets/gmai-icon.png'
 const Contact = () => {
   return (
     <div className='contact' id='contact-section'>
-        <h2>CONTACT ME</h2>
+        <h2>CONTACT <span>ME</span></h2>
         <p>If you have any questions or 
             would like to work together, feel free to reach out!</p>
         <div className='contact-info'>
