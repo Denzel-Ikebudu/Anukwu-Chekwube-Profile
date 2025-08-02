@@ -35,7 +35,7 @@ const Navbar = () => {
           <li><Link to="/#portfolio-section" onClick={() => scrollToSection('portfolio-section')}>Portfolio</Link></li>
         </ul>
         <div className='nav-btn'>
-            <button><Link to='/#contact-section' onClick={() => scrollToSection('contact-section')}>Get In Touch</Link></button>
+            <button><Link to='/#contact-section' onClick={() => scrollToSection('contact-section')}>Connect</Link></button>
             <img src={arrow_icon} alt="" />
         </ div>
 
